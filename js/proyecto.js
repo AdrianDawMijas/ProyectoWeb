@@ -26,13 +26,20 @@ function initRegisterForm(form) {
     const privacyPolicy = document.getElementById("privacyPolicy");
     const passwordHelp = document.getElementById("passwordHelp");
 
+    // Set maxlength attributes for fullName and telefono
+    fullName.maxLength = 20;  // Max length for fullName
+    const telefono = document.getElementById("telefono");
+    telefono.maxLength = 9;  // Max length for telefono
+
     fullName.addEventListener("input", validateField);
     email.addEventListener("input", validateField);
     password.addEventListener("input", function(event) {
-        validateField(event);
+        validateField(event, true);  // Validate password with full criteria
         togglePasswordHelp(password, passwordHelp);
     });
-    confirmPassword.addEventListener("input", validateField);
+    confirmPassword.addEventListener("input", function(event) {
+        validateConfirmPassword(password, confirmPassword);
+    });
     password.addEventListener("focus", () => togglePasswordHelp(password, passwordHelp));
     password.addEventListener("blur", () => passwordHelp.style.display = "none");
 
@@ -82,11 +89,11 @@ function submitRegisterForm(fullName, email, password, confirmPassword, privacyP
 // Función para escapar HTML y evitar inyecciones XSS
 function escapeHtml(unsafe) {
     return unsafe
-         .replace(/&/g, "&amp;")
-         .replace(/</g, "&lt;")
-         .replace(/>/g, "&gt;")
-         .replace(/"/g, "&quot;")
-         .replace(/'/g, "&#039;");
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }
 function initLoginForm(form) {
     const emailLogin = document.getElementById("emailLogin");
@@ -125,21 +132,34 @@ function togglePasswordHelp(password, passwordHelp) {
     }
 }
 
-function validateField(event) {
+function validateField(event, isPassword = false) {
     const field = event.target;
-    const isValid = field.checkValidity();
+    let isValid = field.checkValidity();  // Basic HTML5 validation first
+
+    if (isPassword) {
+        // If it's the password field, we need additional checks
+        isValid = validatePassword(field.value);
+    }
+
     const errorIcon = field.nextElementSibling;
     const successIcon = errorIcon ? errorIcon.nextElementSibling : null;
 
-    if (isValid) {
-        field.style.borderColor = "green";
-        errorIcon.style.display = "none";
-        successIcon.style.display = "block";
-    } else {
-        field.style.borderColor = "red";
-        errorIcon.style.display = "block";
-        successIcon.style.display = "none";
+    field.style.borderColor = isValid ? "green" : "red";
+    errorIcon.style.display = isValid ? "none" : "block";
+    // Display the success icon only if the field is valid
+    if (successIcon) {
+        successIcon.style.display = isValid ? "block" : "none";
     }
+}
+
+function validateConfirmPassword(password, confirmPassword) {
+    const isMatch = password.value === confirmPassword.value && confirmPassword.value !== '';
+    const errorIcon = confirmPassword.nextElementSibling;
+    const successIcon = errorIcon.nextElementSibling;
+
+    confirmPassword.style.borderColor = isMatch ? "green" : "red";
+    errorIcon.style.display = isMatch ? "none" : "block";
+    successIcon.style.display = isMatch ? "block" : "none";
 }
 
 function resetForm(...elements) {
@@ -177,16 +197,17 @@ function saveUserData(userData) {
     return true;
 }
 
+
 function validatePassword(password) {
     return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_])[A-Za-z\d\W_]{8,16}$/.test(password);
 }
 
 function validateForm(fullName, email, password, confirmPassword, privacyPolicy) {
     let isValid = /^[A-Za-z ]+$/.test(fullName.value) &&
-                  email.validity.valid && /^\S+@\S+\.\S+$/.test(email.value) &&
-                  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_])[A-Za-z\d\W_]{8,16}$/.test(password.value) &&
-                  confirmPassword.value === password.value &&
-                  confirmPassword.value.length > 0 &&
-                  privacyPolicy.checked;
+        email.validity.valid && /^\S+@\S+\.\S+$/.test(email.value) &&
+        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_])[A-Za-z\d\W_]{8,16}$/.test(password.value) &&
+        confirmPassword.value === password.value &&
+        confirmPassword.value.length > 0 &&
+        privacyPolicy.checked;
     return isValid;
 }
