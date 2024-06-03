@@ -1,0 +1,722 @@
+/*** RESETEO PROPIEDADES ***/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    }
+
+/*** BODY ***/
+body{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+
+
+/*** HEADER ***/
+
+    & header{
+    
+        & #PrimeraFranja{
+           
+            background-color: black;
+            overflow: visible;
+            height: auto;
+        
+            & #Iconos{
+                position:relative;
+                width: 100px;
+                left: 91%;
+                background: none;
+                & img{
+                    margin-left: 10%;
+                    padding-top: 3%;
+                    width: 30px;
+                    height: 30px;
+                    filter: invert();
+                }
+            }
+        }
+    
+        & #SegundaFranja{
+            position: relative;
+            height: 55px;
+            
+            & img{
+                position: relative;;
+                top: 5%;
+                left: 2%;
+                width: 5%;
+            }
+
+            }
+            & #BarraBusqueda{
+                position: absolute;
+                background-color:rgb(78, 78, 78) transparent;
+                border: inset rgb(221, 221, 221) 1px;
+                padding-top: 0.5%;
+                padding-left: 1%;
+                padding-right: 15%;
+                text-decoration: none;
+                color: rgb(73, 73, 73);
+                font-size: medium;
+                top:18%;
+                left:8%;
+                bottom: 10%;
+                }
+            & nav{
+                float: right;
+                margin-top: 1.2%;
+                margin-right: 4%;
+                height: auto;
+
+                & #GuitarrasElectricas{
+                    position: relative;
+                    height: 100px;
+                }
+                & ul li{
+
+                    display: inline;
+                    text-align: center;
+                    margin-left: 5px;
+                    & a:hover{
+                        color:red;
+                    }
+                    & #submenu {
+                        position: absolute;
+                        top: 100%;
+                        left: 5%;
+                        z-index: 2;
+                        visibility: hidden;
+                        background-color: white;
+                        & ul li{
+                            width: 100px;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: 5%;
+                            
+                        }
+                        
+            }
+        }
+        & #GuitarrasElectricas:hover{
+            & #submenu{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+            }   
+            & a{
+                text-decoration: none;
+                color: rgb(73, 73, 73);
+                font-size: medium;
+            }
+    
+        
+        & #FranjaOculta{
+            display: none;
+        }
+       
+    
+    } 
+
+
+/*** MAIN ***/
+    & main{
+        
+/*** PRIMERA SECCIÓN DE ARTICULOS***/
+        & #Inicio{
+            height: 800px;
+            z-index: 1;
+            position:relative;
+            background-image: url("../Fotos\ Pagina\ Web/Imagen Inicial.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            text-align: center;
+            align-items: center;
+    
+            & img{
+                position: absolute;
+                right: 4.5%;
+                bottom:5%;
+            }
+            & h1{
+                position: relative;
+                top:10%;
+                color: aliceblue;
+                font-size: 250%;
+                font-style: italic;
+            }
+        }
+        & #Principio{
+            margin-left: 20%;
+            position: relative;
+            margin-top: 4%;
+            
+            & section{
+                display: inline-block;
+                position: relative;
+                width: 25%;
+                height: auto;
+
+                & img{
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                }
+                & h2{
+                    position: absolute;
+                    font-size: 70%;
+                    top: 0;
+                    left: 20%;
+                    bottom: 1%
+                    
+                }
+                & h3{
+                    position: absolute;
+                    font-size: 70%;
+                    font-weight: normal;
+                    top: 30%;
+                    left: 20%;
+                }
+            }
+        } 
+        & #ArticulosInicio{
+            
+            position:relative;
+            left: 10%;
+            margin-top: 5%;
+            width: 80%;
+            
+            & h2{
+                position: relative;
+                font-size: 125%;
+                text-align: center; 
+                width: 100%;
+            }
+            
+            & #ArticulosInicio #Novedades{
+                position: relative;
+                margin-top: 2%;
+                margin-left: 18%;
+                width: auto;
+    
+                & article p{
+                    margin-top: 1%;
+                }
+            }
+    
+            & #ArticulosInicio #Guitarras{
+                position: relative;
+                margin-top: 2%;
+                margin-left: 18%;
+                width: auto;
+            }
+    
+        }
+
+/*** PROPIEDAD GENERAL ARTICLES ***/
+        & article{
+            display: inline-block;
+            margin-left: 4%;
+            margin-top: 4%;
+            padding-right:4%;
+            margin-bottom: 4%;
+            text-align: center;   
+            border-right:  solid grey 3px;
+            /* No se poner el border*/
+
+            & img{
+                height: 100px;
+                width: 150px;
+            }
+            & p{
+                font-style: italic;
+                padding: 3% 0;
+                font-size: large;
+            }
+            & #Boton{
+                background-color: black;
+                text-decoration: none;
+                color: white;
+                border: rgb(221, 221, 221) 2px;
+                font-size: 90%;
+                padding: 2%;
+            }
+            & #Boton:hover{
+                color: rgb(172, 121, 121)
+            }
+
+        }
+        & #ultimoArticulo{
+            border-right: none;
+        }
+
+/*** SEGUNDO NAV ***/
+        & #SobreNosotros{
+            position: relative;
+            height: 175px;
+            background-color: rgb(37, 37, 37);
+            background-size:cover;
+            text-align: center;
+            color: white;
+            text-decoration: dotted;
+            font-family: cursive;
+            font-size: large;
+    
+            & ul{
+                position: relative;
+                width: 75%;
+                height: auto;
+                align-items: center;
+                top:15%;
+                bottom: 15;
+                right: 0;
+                left: 0;
+                margin: auto;
+    
+                & li{
+                    display: inline-block;
+                    width: 15%;
+                    height: auto;
+                    margin-left: 2%;
+                    margin-right: 2%;
+    
+                    & img{
+                        width: 80px;
+                        height: 80px;
+                        filter: drop-shadow(0 0 0.5px rgb(245, 184, 184));
+                    } 
+                }
+                  
+            }
+        }
+
+/*** SEGUNDA SECCIÓN DE ARTICULOS ***/
+        & #ArticulosFinal{
+            position:relative;
+            left: 10%;
+            margin-top: 5%;
+            width: 80%;
+            align-items: center;
+    
+            & h2{
+                position: relative;
+                font-size: 150%e;
+                text-align: center;  
+                width: 100%;
+            }
+        }
+
+
+/*** PIE DE MAIN PRE FOOTER ***/
+        & #PreFooter{
+            
+            margin-top: 5%;
+            position: relative;
+            background-color: rgb(229, 228, 241);
+            height: 150px;
+    
+            & #ancla{
+                position: absolute;
+                width: 150px;
+                height: 75px;
+                left: 15%;
+                transform: translateY(-30px);   
+            }
+            & #Boletin{
+                position: absolute;
+                left: 30%;
+                top:10%;
+    
+                & h3{
+                    position: relative;
+                    border-bottom: solid white 1px;
+                    padding-bottom: 1%;
+                    width: 15%;
+                    left: 1%;
+                }
+                & h4{
+                    position: relative;
+                    padding-top: 1%;
+                    font-size: medium;
+                    left: 1%;
+                }
+            
+            }
+            & #barra{
+                background-color:rgb(255, 253, 253);
+                border: inset rgb(221, 221, 221) 2px;
+                padding: 0.5%;
+                padding-right: 15%;
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                font-size: small;
+                position: absolute;
+                right: 10%;
+                top:20%;
+            }
+            & #boton{
+                background-color:rgb(0, 0, 0);
+                border: inset rgb(221, 221, 221) 1px;
+                padding: 0.5%;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                font-size: small;
+                position: absolute;
+                right:9%;
+                top:20%;
+            }
+            & h4{
+                position: absolute;
+                bottom: 25%;
+                right: 19%;
+            }  
+            & #redes {
+                position: absolute;
+                bottom: 21%;
+                right: 10.5%;
+    
+                & img{
+                    width: 30px;
+                    height: 25px;
+                    display: inline-block;
+                }
+            }
+           
+        }
+    }
+
+/*** FOOTER ***/
+    & footer{
+        background-color: black;
+        position: relative;
+        color: rgb(245, 241, 241);
+        height: auto;
+        overflow: hidden;;
+        padding-left: 15%;
+        
+        
+        & section{
+            margin-top: 2%;
+            float: left;
+            padding-right: 2%   ;
+            vertical-align: top;
+            width: 300px;
+            height: 190px;
+            
+        }
+        & img{
+            margin-top: 4%;
+            margin-left: 2%;
+            width: 80px;
+            height: 40px;
+            
+        }
+        & h3{
+            border-bottom: solid white 1px;    
+            text-decoration-style: solid;
+            font-size: 100%;
+        }
+        & ul{
+            list-style-type: none;
+            margin-top: 2%;
+            
+            & a{
+            text-decoration: none;
+            padding-bottom: 3%;
+            color: white;
+            font-style:inherit;
+            }
+        }
+        & p{
+            font-style: inherit;
+            margin-top: 2%;
+        
+        }
+        
+        & #PrimerParrafo{
+            position: absolute;
+            margin-top: 5%;
+            bottom: 1%;
+            
+        }
+    }
+
+
+}
+
+@media (max-width: 1300px) {
+
+    body{
+     & header{
+        position: relative;
+        .abrir{
+            background-color: transparent;
+            order:1;
+            float: right;
+            border: none;
+            margin-top: 1.5%;
+            font-size: 30px;
+            padding-right: 0.5%;
+            right: 5%;
+        }
+        & #PrimeraFranja{
+            display: none;
+        }
+        & #SegundaFranja{
+            display:none;    
+    }
+        & #FranjaOculta{
+            display: inline-block;
+            width: 100%;  
+                & #Buscar{
+                visibility: hidden;
+            }
+
+
+            & #Logo{
+                position: relative;
+                width: 80px;
+                height: 50px;
+                margin-top: 0.5%;
+                left: 5%;
+
+        }
+            & #BarraBusqueda{
+                position: absolute;
+                top: 25%;
+                left: 20%;
+                background-color:rgb(78, 78, 78) transparent;
+                border: inset rgb(221, 221, 221) 1px;
+                padding-top: 0.5%;
+                padding-bottom: 0.5%;
+                padding-left: 1%;
+                padding-right: 5%;
+                text-decoration: none;
+                color: rgb(73, 73, 73);
+                font-size: medium;
+
+                } 
+                
+            & #Iconos{
+                float: right;
+                margin-right: 5%;
+                margin-top: 1.5%;
+                & img{
+                    width: 30px;
+                }
+            }
+            
+        & nav{
+            visibility: hidden;
+            opacity: 0;
+            box-shadow: 0px 0px 1px 1px grey; ;
+            position: absolute;
+            height: 300px;
+            width: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding-top: 2%;
+            padding-left: 2%;
+            padding-right: 5%;
+            z-index: 2;
+            font-size: 1.5em;
+            
+            background-color: white;
+            
+            & ul{
+                display: block;
+                & li{
+                    display: block;
+                    border-bottom: solid black 1px;
+                    margin-bottom: 10%;
+                    & a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .nav.visible{
+            visibility: visible;
+            opacity: 1;
+        }
+
+  
+        }
+    }
+    & main{
+        & #Principio{
+            display: none;
+        }
+        & #SobreNosotros{
+            height: 100px;
+            & h3{
+                display: none;
+            }
+        }
+        & #PreFooter{
+            height: 100px;
+            & #Boletin{
+                display: none;
+            }
+            & h4{
+                display: none;
+            }
+            & #redes{
+                right: 10%;
+                bottom: 15%;
+
+            }
+        }
+    }
+}
+}
+
+@media screen and (max-width: 500px){
+    body{   
+        & header{
+            & #FranjaOculta{
+                display: inline-block;
+                width: 100%;
+
+                & #Iconos{
+                
+                    & #Buscar{
+                        visibility: visible;
+                    }
+            }
+                & #Logo{
+                    position: relative;
+                    width: 60px;
+                    height: 40px;
+                    margin-top: 0.5%;
+                    left: 5%;
+                }
+            }
+            background-color: white;
+            & #BarraBusqueda{
+                display: none;
+            }
+        }
+        & main{
+            & article{
+                position: relative;
+                border: none;
+                padding-left: 25%;
+                padding-top: 5%;
+                margin-top: 3%;
+                padding-right:4%;
+                margin-bottom: 4%;
+                text-align: center;
+                padding-bottom: 10%;
+            }
+            & #SobreNosotros{
+                position: relative;
+                height: 175px;
+                background-color: rgb(37, 37, 37);
+                background-size:cover;
+                text-align: center;
+                color: white;
+                text-decoration: dotted;
+                font-family: cursive;
+                font-size: large;
+        
+                & ul{
+                    position: relative;
+                    width: 75%;
+                    height: auto;
+                    align-items: center;
+                    top:15%;
+                    bottom: 15;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+        
+                    & li{
+                        display: inline-block;
+                        width: 8%;
+                        height: auto;
+                        margin-left: 10%;
+                        margin-right: 10%;
+        
+                        & img{
+                            width: 60px;
+                            height: 60px;
+                            filter: drop-shadow(0 0 0.5px rgb(245, 184, 184));
+                        } 
+                    }
+                      
+                }
+            }
+
+            & #PreFooter{
+            
+        
+                & #ancla{
+                    position: absolute;
+                    width: 100px;
+                    height: 50px;
+                    left: 15%;
+                    transform: translateY(-30px);   
+                }
+        
+                
+                }
+                & #barra{
+                    background-color:rgb(255, 253, 253);
+                    border: inset rgb(221, 221, 221) 2px;
+                    padding: 0.5%;
+                    padding-right: 15%;
+                    text-decoration: none;
+                    color: rgb(0, 0, 0);
+                    font-size: small;
+                    position: absolute;
+                    right: 10%;
+                    top:20%;
+                }
+                & #boton{
+                    background-color:rgb(0, 0, 0);
+                    border: inset rgb(221, 221, 221) 1px;
+                    padding: 0.5%;
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                    font-size: small;
+                    position: absolute;
+                    right:9%;
+                    top:20%;
+                }
+            }
+
+        & footer{
+             background-color: black;
+             position: relative;
+             color: rgb(245, 241, 241);
+             height: auto;
+             overflow: hidden;;
+             padding-top: 5%;
+             padding-left: 40%;
+
+            & section{
+                width: 150px;
+            }
+            & h3{
+                border: none;
+                text-decoration: underline;
+            }
+            & #PrimerParrafo{
+                position: absolute;
+                right: 11%;
+                bottom: 1%;
+                
+            
+        }
+    }
+}
+}

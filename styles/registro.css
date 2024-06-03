@@ -1,0 +1,477 @@
+/*** RESETEO PROPIEDADES ***/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    }
+
+/*** BODY ***/
+body{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+
+
+/*** HEADER ***/
+
+    & header{
+    
+        & #PrimeraFranja{
+           
+            background-color: black;
+            overflow: visible;
+            height: auto;
+        
+            & #Iconos{
+                position:relative;
+                width: 100px;
+                left: 91%;
+                background: none;
+                & img{
+                    margin-left: 10%;
+                    padding-top: 3%;
+                    width: 30px;
+                    height: 30px;
+                    filter: invert();
+                }
+            }
+        }
+    
+        & #SegundaFranja{
+            position: relative;
+            height: 55px;
+            
+            & img{
+                position: relative;;
+                top: 5%;
+                left: 2%;
+                width: 5%;
+            }
+
+            }
+            & #BarraBusqueda{
+                position: absolute;
+                background-color:rgb(78, 78, 78) transparent;
+                border: inset rgb(221, 221, 221) 1px;
+                padding-top: 0.5%;
+                padding-left: 1%;
+                padding-right: 15%;
+                text-decoration: none;
+                color: rgb(73, 73, 73);
+                font-size: medium;
+                top:18%;
+                left:8%;
+                bottom: 10%;
+                }
+            & nav{
+                float: right;
+                margin-top: 1.2%;
+                margin-right: 4%;
+                height: auto;
+
+                & #GuitarrasElectricas{
+                    position: relative;
+                    height: 100px;
+                }
+                & ul li{
+
+                    display: inline;
+                    text-align: center;
+                    margin-left: 5px;
+                    & a:hover{
+                        color:red;
+                    }
+                    & #submenu {
+                        position: absolute;
+                        top: 100%;
+                        left: 5%;
+                        z-index: 2;
+                        visibility: hidden;
+                        background-color: white;
+                        & ul li{
+                            width: 100px;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: 5%;
+                            
+                        }
+                        
+            }
+        }
+        & #GuitarrasElectricas:hover{
+            & #submenu{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+            }   
+            & a{
+                text-decoration: none;
+                color: rgb(73, 73, 73);
+                font-size: medium;
+            }
+    
+        
+        & #FranjaOculta{
+            display: none;
+        }
+       
+    
+    } 
+
+
+/*** MAIN ***/
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        position: relative;
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+
+            &:invalid + .error-icon {
+                display: block;
+            }
+
+            &:valid + .success-icon {
+                display: block;
+            }
+        }
+
+        .error-icon,
+        .success-icon {
+            display: none;
+            position: absolute;
+            right: 10px;
+            top: 30px;
+            font-size: 20px;
+        }
+
+        .error-icon {
+            color: red;
+        }
+
+        .success-icon {
+            color: green;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background: #333;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #555;
+        }
+    }
+
+    #privacyPolicy {
+        position: absolute;
+        right: 45%;
+        top: 20%;
+    }
+
+    #Texto {
+        position: relative;
+        left: 10%;
+    }
+
+    p {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+
+        a {
+            color: #333;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    small {
+        font-size: 12px;
+        color: #666;
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+
+/*** FOOTER ***/
+    & footer{
+        background-color: black;
+        position: relative;
+        color: rgb(245, 241, 241);
+        height: auto;
+        overflow: hidden;;
+        padding-left: 15%;
+        
+        
+        & section{
+            margin-top: 2%;
+            float: left;
+            padding-right: 2%   ;
+            vertical-align: top;
+            width: 300px;
+            height: 190px;
+            
+        }
+        & img{
+            margin-top: 4%;
+            margin-left: 2%;
+            width: 80px;
+            height: 40px;
+            
+        }
+        & h3{
+            border-bottom: solid white 1px;    
+            text-decoration-style: solid;
+            font-size: 100%;
+        }
+        & ul{
+            list-style-type: none;
+            margin-top: 2%;
+            
+            & a{
+            text-decoration: none;
+            padding-bottom: 3%;
+            color: white;
+            font-style:inherit;
+            }
+        }
+        & p{
+            font-style: inherit;
+            margin-top: 2%;
+        
+        }
+        
+        & #PrimerParrafo{
+            position: absolute;
+            margin-top: 5%;
+            bottom: 1%;
+            
+        }
+    }
+
+
+}
+
+@media (max-width: 1300px) {
+
+    body{
+     & header{
+        position: relative;
+        .abrir{
+            background-color: transparent;
+            order:1;
+            float: right;
+            border: none;
+            margin-top: 1.5%;
+            font-size: 30px;
+            padding-right: 0.5%;
+            right: 5%;
+        }
+        & #PrimeraFranja{
+            display: none;
+        }
+        & #SegundaFranja{
+            display:none;    
+    }
+        & #FranjaOculta{
+            display: inline-block;
+            width: 100%;  
+                & #Buscar{
+                visibility: hidden;
+            }
+
+
+            & #Logo{
+                position: relative;
+                width: 80px;
+                height: 50px;
+                margin-top: 0.5%;
+                left: 5%;
+
+        }
+            & #BarraBusqueda{
+                position: absolute;
+                top: 25%;
+                left: 20%;
+                background-color:rgb(78, 78, 78) transparent;
+                border: inset rgb(221, 221, 221) 1px;
+                padding-top: 0.5%;
+                padding-bottom: 0.5%;
+                padding-left: 1%;
+                padding-right: 5%;
+                text-decoration: none;
+                color: rgb(73, 73, 73);
+                font-size: medium;
+
+                } 
+                
+            & #Iconos{
+                float: right;
+                margin-right: 5%;
+                margin-top: 1.5%;
+                & img{
+                    width: 30px;
+                }
+            }
+            
+        & nav{
+            visibility: hidden;
+            opacity: 0;
+            box-shadow: 0px 0px 1px 1px grey; ;
+            position: absolute;
+            height: 300px;
+            width: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding-top: 2%;
+            padding-left: 2%;
+            padding-right: 5%;
+            z-index: 2;
+            font-size: 1.5em;
+            
+            background-color: white;
+            
+            & ul{
+                display: block;
+                & li{
+                    display: block;
+                    border-bottom: solid black 1px;
+                    margin-bottom: 10%;
+                    & a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .nav.visible{
+            visibility: visible;
+            opacity: 1;
+        }
+
+  
+        }
+    }
+    & main{
+        
+    }
+}
+}
+
+@media screen and (max-width: 500px){
+    body{   
+        & header{
+            & #FranjaOculta{
+                display: inline-block;
+                width: 100%;
+
+                & #Iconos{
+                
+                    & #Buscar{
+                        visibility: visible;
+                    }
+            }
+                & #Logo{
+                    position: relative;
+                    width: 60px;
+                    height: 40px;
+                    margin-top: 0.5%;
+                    left: 5%;
+                }
+            }
+            background-color: white;
+            & #BarraBusqueda{
+                display: none;
+            }
+        }
+        & main{
+        }
+
+        & footer{
+             background-color: black;
+             position: relative;
+             color: rgb(245, 241, 241);
+             height: auto;
+             overflow: hidden;;
+             padding-top: 5%;
+             padding-left: 40%;
+
+            & section{
+                width: 150px;
+            }
+            & h3{
+                border: none;
+                text-decoration: underline;
+            }
+            & #PrimerParrafo{
+                position: absolute;
+                right: 11%;
+                bottom: 1%;
+                
+            
+        }
+    }
+}
+}

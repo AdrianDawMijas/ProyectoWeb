@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>GuitarHouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+    <header>
+        <section id="PrimeraFranja">
+            <section id="Iconos">
+               <a href="login.html"><img src="Fotos Pagina Web/usuariopng.png"></a>
+                <a href=""><img src="Fotos Pagina Web/carritopng.png"></a>
+            </section>
+        </section>
+        <section id="SegundaFranja">
+            <a href="index.html"><img src="Fotos Pagina Web/Icono.png"></a>
+            <a href="" id="BarraBusqueda">&#128270; Encuentra lo que necesites</a>
+            <nav><ul>
+                
+                <li id="GuitarrasElectricas"><a href="">Guitarras Eléctricas</a>
+                    <nav id="submenu"><ul>
+                
+                        <li><a href="">Fender</a></li>
+                        <li><a href="">Gibson</a></li>
+                        <li><a href="">Ibanez</a></li>
+                        <li><a href="">PRS</a></li>
+                        <li><a href="">Gretsch</a></li>
+                        <li><a href="">LTD</a></li>
+                    </ul></nav>
+                </li>
+                <li><a href="">Guitarras Acústicas</a></li>
+                <li><a href="">Baterías</a></li>
+                <li><a href="">Amplificadores</a></li>
+                <li><a href="">Accesoríos</a></li>
+                <li><a href="">Outlet</a></li>
+            </ul></nav>
+
+        </section>
+        <section id="FranjaOculta">
+            <a href=""  ><img src="Fotos Pagina Web/Icono.png" id="Logo" ></a>
+            <a href="" id="BarraBusqueda">&#128270; Encuentra lo que necesites</a>
+            <nav class="nav" id="nav"><ul>
+                <li><p id="cerrar">X</p></li>
+                <li><a href="">Guitarras Eléctricas</a></li>
+                <li><a href="">Guitarras Acústicas</a></li>
+                <li><a href="">Baterías</a></li>
+                <li><a href="">Amplificadores</a></li>
+                <li><a href="">Accesoríos</a></li>
+                <li><a href="">Outlet</a></li>
+            </ul></nav>
+            <section id="Iconos">
+                <a href="" id="Buscar"><img src="Fotos Pagina Web/lupita.png"></a>
+                <a href=""><img src="Fotos Pagina Web/usuariopng.png"></a>
+                <a href=""><img src="Fotos Pagina Web/carritopng.png"></a>
+            </section>
+                <button id="abrir" class="abrir"><i class="bi bi-list"></i></button>
+            </section>
+           
+        </section>
+    </header>
+    <main>
+        <section class="container">
+            <section class="form-container">
+                <form id="loginForm">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <label for="emailLogin"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                        <input type="email" id="emailLogin" name="emailLogin" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="passwordLogin"><i class="fas fa-lock"></i> Contraseña</label>
+                        <input type="password" id="passwordLogin" name="passwordLogin" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p>¿No tienes una cuenta? <a href="registro.html">Registrate</a></p>
+                </form>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h3>Sobre GuitarHouse</h3>
+            <ul>
+                <li><a href="">Quienes somos</a></li>
+                <li><a href="">Nuestra tienda</a></li>
+                <li><a href="">Contacta con nosotros</a></li>
+            </ul>
+            <p id="PrimerParrafo">©2023 por GuitarHouse. Creado por Adrián García González</p>
+        </section>
+        <section id="SegundoFooter">
+            <h3>Atención al ciente</h3>
+            <ul>
+                <li><a href="">Aviso legar</a></li>
+                <li><a href="">Terminos y condiciones</a></li>
+                <li><a href="">Política de cookies</a></li>
+                <li><a href="">Protección de datos</a></li>
+                <li><a href="">Formas de pago</a></li>
+                <li><a href="">Devoluciones</a></li>
+            </ul>
+        </section>
+        <section id="TercerFooter">
+            <h3>Compra segura y envío</h3>
+            <a href=""><img src="Fotos Pagina Web/paypal_logo_icon_170865.png"></a>
+            <a href=""><img src="Fotos Pagina Web/Visa_Logo.png"></a>
+            <a href=""><img src="Fotos Pagina Web/1200px-Correos_logo.svg.png"></a>
+        </section>    
+        <section id="Cuarto Footer">
+            <h3>Contacto</h3>
+            <p>C. Severo Ochora,16-20,29590 Málaga<br>(34)9555354555<br>info@guitarhouse.com</p>
+        </section>
+    </footer>
+
+    <script src="./js/proyecto.js" defer></script>
+
+</body>
+</html>
